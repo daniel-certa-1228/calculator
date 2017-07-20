@@ -58,7 +58,9 @@ function calculate(num1, num2, calcFunction) {
 }
 
 function spitToDom(calculated) {
-	let display = document.getElementById()
+	let display = document.getElementById('calc-display');
+	// display.innerHTML('')
+	console.log( "spitToDom");
 
 }
 //In your JavaScript, put an event listener on each of the buttons.

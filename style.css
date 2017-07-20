@@ -1,6 +1,16 @@
 body {
 	font-family: sans-serif;
 	background-color: whitesmoke;
+	text-align: center;
+}
+
+.container {
+	display: inline-block;
+	max-width: 60%;
+	/*margin: auto 15%;*/
+	padding: 1em;
+	border: 1px solid grey;
+
 }
 
 h1 {
