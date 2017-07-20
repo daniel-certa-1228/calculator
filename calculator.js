@@ -52,41 +52,48 @@ function calcDivide (num1, num2) {
     3. A function that performs an operation on them
   Return the value of the operation.
  */
-function calculate(num1, num2, calcFunction) {
-	let resultValue = calcFunction(num1,num2);
-	return resultValue;
-}
 
 function spitToDom(calculated) {
-	let display = document.getElementById('calc-display');
-	// display.innerHTML('')
-	console.log( "spitToDom");
-
+	let numDisplay = `<h4>${calculated}</h4>`
+	// console.log( "numDisplay", numDisplay );
+	let output = document.getElementById("calc-display")
+	// console.log( "output", output );
+	output.innerHTML = numDisplay;
 }
 //In your JavaScript, put an event listener on each of the buttons.
 let addButton = document.getElementById('add-btn')
 	addButton.addEventListener('click', () => {
-		console.log( "addButton works");
+		// console.log( "addButton works");
+		let addOutput = calcAdd(getNum1(), getNum2());
+		addOutput = addOutput.toString();
+		// console.log( "addOutput", addOutput );
+		spitToDom(addOutput);
+
 	});
 
 let subButton = document.getElementById('sub-btn')
 	subButton.addEventListener('click', () => {
-		console.log( "subButton works");
+		// console.log( "subButton works");
+		let subOutput = calcSubtract(getNum1(), getNum2());
+		subOutput = subOutput.toString();
+		spitToDom(subOutput);
 	});
 
 let multButton = document.getElementById('mult-button')
 	multButton.addEventListener('click', () => {
-		console.log( "multButton works");
+		// console.log( "multButton works");
+		let multOutput = calcMulitiply(getNum1(), getNum2());
+		multOutput = multOutput.toString();
+		spitToDom(multOutput);
 	});
 
 let divButton = document.getElementById('divide-button')
 	divButton.addEventListener('click', () => {
-		console.log( "divButton works");
+		// console.log( "divButton works");
+		let divOutput = calcDivide(getNum1(), getNum2());
+		divOutput = divOutput.toString();
+		spitToDom(divOutput);
 	});
-
-
-
-
 
 
 
